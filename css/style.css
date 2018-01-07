@@ -5,6 +5,9 @@
   margin: 0 auto; }
 
 .top_menu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   height: 0;
   visibility: hidden;
   -webkit-animation-name: menu;
@@ -25,7 +28,39 @@
     -webkit-animation-duration: 1s;
             animation-duration: 1s;
     -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards; }
+            animation-fill-mode: forwards;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .top_menu .logo_menu img {
+      height: 120px;
+      padding: 10px 0; }
+    .top_menu .logo_menu ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+      .top_menu .logo_menu ul li {
+        padding: 0 30px;
+        font-size: 15px;
+        cursor: pointer; }
 
 .jumbotron {
   position: relative;
@@ -94,6 +129,18 @@
             animation-delay: 3s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards; }
+  .jumbotron img {
+    opacity: 0;
+    width: 200px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-animation-name: magnify;
+            animation-name: magnify;
+    -webkit-animation-duration: 15s;
+            animation-duration: 15s;
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
 
 @-webkit-keyframes menu {
   from {
@@ -101,7 +148,7 @@
     height: 0; }
   to {
     visibility: visible;
-    height: 10vh; } }
+    height: 15vh; } }
 
 @keyframes menu {
   from {
@@ -109,21 +156,21 @@
     height: 0; }
   to {
     visibility: visible;
-    height: 10vh; } }
+    height: 15vh; } }
 @-webkit-keyframes jumbo {
   from {
     background-image: url("../img/szyca_szyld.jpg");
     height: 100vh; }
   to {
     background-image: url("../img/szyca_torba.jpg");
-    height: 90vh; } }
+    height: 85vh; } }
 @keyframes jumbo {
   from {
     background-image: url("../img/szyca_szyld.jpg");
     height: 100vh; }
   to {
     background-image: url("../img/szyca_torba.jpg");
-    height: 90vh; } }
+    height: 85vh; } }
 @-webkit-keyframes logo_show {
   from {
     opacity: 0; }
@@ -188,3 +235,23 @@
   100% {
     left: 80%;
     opacity: 0; } }
+@-webkit-keyframes magnify {
+  0% {
+    opacity: 0;
+    width: 200px; }
+  80% {
+    opacity: 1;
+    width: 400px; }
+  100% {
+    opacity: 0;
+    width: 500px; } }
+@keyframes magnify {
+  0% {
+    opacity: 0;
+    width: 200px; }
+  80% {
+    opacity: 1;
+    width: 400px; }
+  100% {
+    opacity: 0;
+    width: 500px; } }
