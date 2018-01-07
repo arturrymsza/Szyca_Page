@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i");
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto; }
+
+.top_menu {
+  height: 0;
+  visibility: hidden;
+  -webkit-animation-name: menu;
+          animation-name: menu;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-family: "Josefin Sans", sans-serif; }
+  .top_menu .logo_menu {
+    opacity: 0;
+    -webkit-animation-name: logo_show;
+            animation-name: logo_show;
+    -webkit-animation-delay: 8.5s;
+            animation-delay: 8.5s;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+
+.jumbotron {
+  position: relative;
+  background-image: url("../img/szyca_szyld.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  -webkit-animation-name: jumbo;
+          animation-name: jumbo;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 80px;
+  font-weight: 700; }
+  .jumbotron .tradition {
+    opacity: 0;
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    color: white;
+    -webkit-animation-name: fadeRL;
+            animation-name: fadeRL;
+    -webkit-animation-duration: 6s;
+            animation-duration: 6s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+  .jumbotron .quality {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    color: white;
+    -webkit-animation-name: fadeLR;
+            animation-name: fadeLR;
+    -webkit-animation-duration: 6s;
+            animation-duration: 6s;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+  .jumbotron .passion {
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    color: white;
+    -webkit-animation-name: fadeRLL;
+            animation-name: fadeRLL;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+
+@-webkit-keyframes menu {
+  from {
+    visibility: hidden;
+    height: 0; }
+  to {
+    visibility: visible;
+    height: 10vh; } }
+
+@keyframes menu {
+  from {
+    visibility: hidden;
+    height: 0; }
+  to {
+    visibility: visible;
+    height: 10vh; } }
+@-webkit-keyframes jumbo {
+  from {
+    background-image: url("../img/szyca_szyld.jpg");
+    height: 100vh; }
+  to {
+    background-image: url("../img/szyca_torba.jpg");
+    height: 90vh; } }
+@keyframes jumbo {
+  from {
+    background-image: url("../img/szyca_szyld.jpg");
+    height: 100vh; }
+  to {
+    background-image: url("../img/szyca_torba.jpg");
+    height: 90vh; } }
+@-webkit-keyframes logo_show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes logo_show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadeRL {
+  0% {
+    left: 70%;
+    opacity: 0; }
+  50% {
+    opacity: 0.8; }
+  100% {
+    left: 50%;
+    opacity: 0; } }
+@keyframes fadeRL {
+  0% {
+    left: 70%;
+    opacity: 0; }
+  50% {
+    opacity: 0.8; }
+  100% {
+    left: 50%;
+    opacity: 0; } }
+@-webkit-keyframes fadeRLL {
+  0% {
+    left: 50%;
+    opacity: 0; }
+  50% {
+    opacity: 0.8; }
+  100% {
+    left: 20%;
+    opacity: 0; } }
+@keyframes fadeRLL {
+  0% {
+    left: 50%;
+    opacity: 0; }
+  50% {
+    opacity: 0.8; }
+  100% {
+    left: 20%;
+    opacity: 0; } }
+@-webkit-keyframes fadeLR {
+  0% {
+    left: 60%;
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    left: 80%;
+    opacity: 0; } }
+@keyframes fadeLR {
+  0% {
+    left: 60%;
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    left: 80%;
+    opacity: 0; } }
