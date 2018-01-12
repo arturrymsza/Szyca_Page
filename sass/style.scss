@@ -8,109 +8,199 @@ $font: 'Josefin Sans', sans-serif;
 	margin: 0 auto;
 }
 
-.top_menu {
-	position: sticky;
-	top: 0;
-	height: 0;
-	visibility: hidden;
-	animation-name: menu;
-	animation-duration: 2s;
-	animation-delay: 7s;
-	animation-fill-mode: forwards;
-	font-family: $font;
+header {
+	backface-visibility: hidden;
+	transform: translateZ(0);
 
-	.logo_menu {
-		opacity: 0;
-		animation-name: logo_show;
-		animation-delay: 8.5s;
-		animation-duration: 1s;
+	.top_menu {
+		position: sticky;
+		top: 0;
+		height: 0;
+		visibility: hidden;
+		animation-name: menu;
+		animation-duration: 2s;
+		animation-delay: 7s;
 		animation-fill-mode: forwards;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
+		font-family: $font;
 
-		img {
-			height: 120px;
-			padding: 10px 0;
-		}
-
-		ul {
+		.logo_menu {
+			opacity: 0;
+			animation-name: logo_show;
+			animation-delay: 8.5s;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
 			display: flex;
 			flex-direction: row;
-			justify-content: space-around;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
 
-			li {
-				padding: 0 30px;
-				font-size: 15px;
-				cursor: pointer;
+			img {
+				height: 120px;
+				padding: 10px 0;
 			}
+
+			ul {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+
+				li {
+					padding: 0 30px;
+					font-size: 15px;
+					cursor: pointer;
+				}
+
+				a {
+					text-decoration: none;
+					color: black;
+				}
+			}
+		}
+	}
+
+	.jumbotron {
+		position: relative;
+		background-image: url('../img/szyca_szyld.jpg');
+		background-position: center;
+		background-size: cover;
+		height: 100vh;
+		animation-name: jumbo;
+		animation-delay: 7s;
+		animation-duration: 2s;
+		animation-fill-mode: forwards;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font: {
+			family: $font;
+			size: 80px;
+			weight: 700;
+		};
+
+		.tradition {
+			opacity: 0;
+			position: absolute;
+			top: 60%;
+			left: 70%;
+			color: white;
+			animation-name: fadeRL;
+			animation-duration: 6s;
+			animation-fill-mode: forwards;
+		}
+
+		.quality {
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 20%;
+			color: white;
+			animation-name: fadeLR;
+			animation-duration: 6s;
+			animation-delay: 3s;
+			animation-fill-mode: forwards;
+		}
+
+		.passion {
+			opacity: 0;
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			color: white;
+			animation-name: fadeRLL;
+			animation-duration: 5s;
+			animation-delay: 3s;
+			animation-fill-mode: forwards;
+		}
+
+		img {
+			opacity: 0;
+			width: 200px;
+			align-self: center;
+			animation-timing-function: linear;
+			animation-name: magnify;
+			animation-duration: 10s;
+			animation-delay: 5.5s;
 		}
 	}
 }
 
-.jumbotron {
-	position: relative;
-	background-image: url('../img/szyca_szyld.jpg');
-	background-position: center;
-	background-size: cover;
-	height: 100vh;
-	animation-name: jumbo;
-	animation-delay: 7s;
-	animation-duration: 2s;
-	animation-fill-mode: forwards;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	font: {
-		family: $font;
-		size: 80px;
-		weight: 700;
-	};
+main {
+	.services {
+		width:100%;
+		height:400px;
+		overflow:hidden;
+		background: radial-gradient(ellipse at center, #fff 0%, #fff 25%, #fff 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f7e', endColorstr='#36', GradientType=1 );
 
-	.tradition {
-		opacity: 0;
-		position: absolute;
-		top: 60%;
-		left: 70%;
-		color: white;
-		animation-name: fadeRL;
-		animation-duration: 6s;
-		animation-fill-mode: forwards;
-	}
+		.wrapper {
+			box-sizing:border-box;
+			width:100%;
+			height:100%;
+  			padding:5%;
+  			perspective: 2000px;
 
-	.quality {
-		opacity: 0;
-		position: absolute;
-		top: 50%;
-		left: 20%;
-		color: white;
-		animation-name: fadeLR;
-		animation-duration: 6s;
-		animation-delay: 3s;
-		animation-fill-mode: forwards;
-	}
+  			.left,
+  			.middle,
+  			.right {
+  				float:left;
+				position:relative;
+				height:100%;
+				background-color:#0ff0ff;
+				width:33%;
+  			}
 
-	.passion {
-		opacity: 0;
-		position: absolute;
-		top: 30%;
-		left: 50%;
-		color: white;
-		animation-name: fadeRLL;
-		animation-duration: 5s;
-		animation-delay: 3s;
-		animation-fill-mode: forwards;
-	}
+  			.left {
+  				transform-origin:100% 50%;
+				transform: rotateY(180deg);
+				transition:.7s ease-in-out;
+				z-index:20;
 
-	img {
-		opacity: 0;
-		width: 200px;
-		align-self: center;
-		animation-name: magnify;
-		animation-duration: 15s;
-		animation-delay: 0.1s;
+				.open {
+					transform-origin:100% 50%;
+  					transform:rotateY(0deg);
+  					transition:.7s ease-in-out;
+  				}
+
+				.front, 
+				.back {
+					height:100%;
+					width:100%;
+					position:absolute;
+					top:0;
+				}
+
+				.front{
+					transform:rotateY(180deg);
+					background-color:#0ff0ff;
+					z-index:5;
+				}
+				
+				.back{
+					background-color:#0ff0ff;
+					z-index:4;
+					backface-visibility:hidden;
+
+					.open {
+						z-index:10;
+					}
+				}
+  			}
+
+  			.right {
+				transform-origin:0% 50%;
+				transform:rotateY(-180deg);
+				transition:.7s ease-in-out;
+			
+  				.open {
+					transform-origin:0% 50%;
+					transform:rotateY(0deg);
+					transition:.7s ease-in-out;
+  				}
+  			}
+
+
+		}
 	}
 }
 
