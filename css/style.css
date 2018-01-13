@@ -152,13 +152,13 @@ header {
               animation-delay: 5.5s; }
 
 main .services {
+  position: absolute;
   width: 100%;
-  height: 100%;
+  height: 40vh;
   overflow: hidden;
-  background: #117e68;
-  background: radial-gradient(ellipse at center, #117e68 0%, #117e68 25%, #015136 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#117e68', endColorstr='#015136', GradientType=1 ); }
+  background: white; }
   main .services .wrapper {
+    font-family: "Josefin Sans", sans-serif;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -171,7 +171,8 @@ main .services {
       float: left;
       position: relative;
       height: 100%;
-      background-color: #0ff0ff;
+      color: white;
+      background-color: #0f0f0f;
       width: 33%; }
     main .services .wrapper .left {
       -webkit-transform-origin: 100% 50%;
@@ -180,7 +181,7 @@ main .services {
               transform: rotateY(180deg);
       transition: .7s ease-in-out;
       z-index: 20; }
-      main .services .wrapper .left .open {
+      main .services .wrapper .left.open {
         -webkit-transform-origin: 100% 50%;
                 transform-origin: 100% 50%;
         -webkit-transform: rotateY(0deg);
@@ -195,11 +196,12 @@ main .services {
       main .services .wrapper .left .front {
         -webkit-transform: rotateY(180deg);
                 transform: rotateY(180deg);
-        background-color: #0ff0ff;
+        color: white;
+        background-color: #0f0f0f;
         z-index: 5; }
         main .services .wrapper .left .front .openB {
           background-color: transparent;
-          border: 2px solid rgba(0, 0, 0, 0.5);
+          border: 2px solid white;
           padding: 5px;
           position: absolute;
           min-width: 120px;
@@ -210,9 +212,10 @@ main .services {
           font-size: 1em;
           opacity: .7;
           transition: .2s ease-in-out;
-          cursor: pointer; }
+          cursor: pointer;
+          color: white; }
           main .services .wrapper .left .front .openB:hover {
-            background-color: black;
+            background-color: #001000;
             color: white;
             transition: .2s ease-in-out; }
         main .services .wrapper .left .front .preview {
@@ -229,13 +232,13 @@ main .services {
             position: absolute;
             left: 0;
             top: 0;
-            background: linear-gradient(transparent, white); }
+            background: linear-gradient(transparent, #0f0f0f); }
       main .services .wrapper .left .back {
-        background-color: #0ff0ff;
+        background-color: #0f0f0f;
         z-index: 4;
         -webkit-backface-visibility: hidden;
                 backface-visibility: hidden; }
-        main .services .wrapper .left .back .open {
+        main .services .wrapper .left .back.open {
           z-index: 10; }
     main .services .wrapper .right {
       -webkit-transform-origin: 0% 50%;
@@ -243,7 +246,7 @@ main .services {
       -webkit-transform: rotateY(-180deg);
               transform: rotateY(-180deg);
       transition: .7s ease-in-out; }
-      main .services .wrapper .right .open {
+      main .services .wrapper .right.open {
         -webkit-transform-origin: 0% 50%;
                 transform-origin: 0% 50%;
         -webkit-transform: rotateY(0deg);
@@ -272,12 +275,9 @@ main .services {
       box-sizing: border-box;
       overflow: hidden; }
       main .services .wrapper .sectionWrap h1 {
-        font-family: 'Playfair Display', serif;
         font-size: 3em;
-        line-height: 1;
-        color: #34495e; }
+        line-height: 1; }
       main .services .wrapper .sectionWrap p {
-        font-family: 'Josefin Sans', sans-serif;
         font-size: 1.2em;
         max-height: 100px;
         text-overflow: clip; }
@@ -285,7 +285,8 @@ main .services {
         border: 3px solid #34495e;
         width: 30px;
         margin: 12px 0 8px 1px;
-        text-align: left; }
+        text-align: left;
+        color: white; }
 
 @-webkit-keyframes menu {
   from {

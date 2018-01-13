@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i');
 
 $font: 'Josefin Sans', sans-serif;
+$foldColor: #0f0f0f;
 
 .container {
 	width: 100%;
@@ -127,19 +128,14 @@ header {
 
 main {
 	.services {
+		position: absolute;
 		width:100%;
-  height:100%;
-  overflow:hidden;
-  background: rgba(17,126,104,1);
-  background: -moz-radial-gradient(center, ellipse cover, rgba(17,126,104,1) 0%, rgba(17,126,104,1) 25%, rgba(1,81,54,1) 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(17,126,104,1)), color-stop(25%, rgba(17,126,104,1)), color-stop(100%, rgba(1,81,54,1)));
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(17,126,104,1) 0%, rgba(17,126,104,1) 25%, rgba(1,81,54,1) 100%);
-  background: -o-radial-gradient(center, ellipse cover, rgba(17,126,104,1) 0%, rgba(17,126,104,1) 25%, rgba(1,81,54,1) 100%);
-  background: -ms-radial-gradient(center, ellipse cover, rgba(17,126,104,1) 0%, rgba(17,126,104,1) 25%, rgba(1,81,54,1) 100%);
-  background: radial-gradient(ellipse at center, rgba(17,126,104,1) 0%, rgba(17,126,104,1) 25%, rgba(1,81,54,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#117e68', endColorstr='#015136', GradientType=1 );
+		height:40vh;
+		overflow:hidden;
+		background: white;
 
 		.wrapper {
+			font-family: $font;
 			box-sizing:border-box;
 			width:100%;
 			height:100%;
@@ -152,7 +148,8 @@ main {
   				float: left;
 				position:relative;
 				height:100%;
-				background-color:#0ff0ff;
+				color: white;
+				background-color:$foldColor;
 				width:33%;
   			}
 
@@ -162,10 +159,10 @@ main {
 				transition: .7s ease-in-out;
 				z-index: 20;
 
-				.open {
-					transform-origin:100% 50%;
-  					transform:rotateY(0deg);
-  					transition:.7s ease-in-out;
+				&.open {
+					transform-origin: 100% 50%;
+  					transform: rotateY(0deg);
+  					transition: .7s ease-in-out;
   				}
 
 				.front, 
@@ -178,12 +175,13 @@ main {
 
 				.front{
 					transform: rotateY(180deg);
-					background-color: #0ff0ff;
+					color: white;
+					background-color: $foldColor;
 					z-index: 5;
 
 					.openB {
 						background-color:transparent;
-						border:2px solid rgba(0,0,0,0.5);
+						border:2px solid white;
 						padding:5px;
 						position:absolute;
 						min-width:120px;
@@ -195,9 +193,10 @@ main {
 						opacity:.7;
 						transition:.2s ease-in-out;
 						cursor:pointer;
+						color: white;
 
 						&:hover {
-							background-color:rgba(0,0,0,1);
+							background-color:rgba(0,16,0,1);
 							color:white;
 							transition:.2s ease-in-out;
 						}
@@ -218,18 +217,18 @@ main {
 							position:absolute;
 							left:0;
 							top:0;
-							background:linear-gradient(transparent, white);
+							background:linear-gradient(transparent, $foldColor);
 						}
 					}
 				}
 				
 				.back{
-					background-color:#0ff0ff;
-					z-index:4;
-					backface-visibility:hidden;
+					background-color: $foldColor;
+					z-index: 4;
+					backface-visibility: hidden;
 
-					.open {
-						z-index:10;
+					&.open {
+						z-index: 10;
 					}
 				}
   			}
@@ -239,10 +238,10 @@ main {
 				transform:rotateY(-180deg);
 				transition:.7s ease-in-out;
 			
-  				.open {
-					transform-origin:0% 50%;
-					transform:rotateY(0deg);
-					transition:.7s ease-in-out;
+  				&.open {
+					transform-origin: 0% 50%;
+					transform: rotateY(0deg);
+					transition: .7s ease-in-out;
   				}
 
   				.closeB {
@@ -274,14 +273,11 @@ main {
 				overflow:hidden;
 
 				h1 {
-					font-family: 'Playfair Display', serif;
 					font-size:3em;
 					line-height:1;
-					color:#34495e;
 				}
 
 				p {
-					font-family: 'Josefin Sans', sans-serif;
 					font-size:1.2em;
 					max-height:100px;
 					text-overflow: clip;
@@ -292,6 +288,7 @@ main {
 					width:30px;
 					margin:12px 0 8px 1px;
 					text-align:left;
+					color: white;
 				}
 			}
 		}
