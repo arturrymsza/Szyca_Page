@@ -153,10 +153,11 @@ header {
 
 main .services {
   width: 100%;
-  height: 400px;
+  height: 100%;
   overflow: hidden;
-  background: radial-gradient(ellipse at center, #fff 0%, #fff 25%, #fff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f7e', endColorstr='#36', GradientType=1 ); }
+  background: #117e68;
+  background: radial-gradient(ellipse at center, #117e68 0%, #117e68 25%, #015136 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#117e68', endColorstr='#015136', GradientType=1 ); }
   main .services .wrapper {
     box-sizing: border-box;
     width: 100%;
@@ -196,6 +197,39 @@ main .services {
                 transform: rotateY(180deg);
         background-color: #0ff0ff;
         z-index: 5; }
+        main .services .wrapper .left .front .openB {
+          background-color: transparent;
+          border: 2px solid rgba(0, 0, 0, 0.5);
+          padding: 5px;
+          position: absolute;
+          min-width: 120px;
+          max-width: 150px;
+          z-index: 50;
+          bottom: 30px;
+          font-weight: 400;
+          font-size: 1em;
+          opacity: .7;
+          transition: .2s ease-in-out;
+          cursor: pointer; }
+          main .services .wrapper .left .front .openB:hover {
+            background-color: black;
+            color: white;
+            transition: .2s ease-in-out; }
+        main .services .wrapper .left .front .preview {
+          max-height: 100px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          content: "";
+          position: relative;
+          display: block; }
+          main .services .wrapper .left .front .preview:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(transparent, white); }
       main .services .wrapper .left .back {
         background-color: #0ff0ff;
         z-index: 4;
@@ -215,6 +249,43 @@ main .services {
         -webkit-transform: rotateY(0deg);
                 transform: rotateY(0deg);
         transition: .7s ease-in-out; }
+      main .services .wrapper .right .closeB {
+        position: absolute;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        z-index: 50;
+        width: 50px;
+        font-size: 1.5em;
+        cursor: pointer;
+        height: 50px;
+        top: 0;
+        right: 0;
+        transition: .2s ease-in-out; }
+        main .services .wrapper .right .closeB:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+          transition: .2s ease-in-out; }
+    main .services .wrapper .sectionWrap {
+      height: 100%;
+      width: 100%;
+      padding: 40px;
+      box-sizing: border-box;
+      overflow: hidden; }
+      main .services .wrapper .sectionWrap h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3em;
+        line-height: 1;
+        color: #34495e; }
+      main .services .wrapper .sectionWrap p {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.2em;
+        max-height: 100px;
+        text-overflow: clip; }
+      main .services .wrapper .sectionWrap hr {
+        border: 3px solid #34495e;
+        width: 30px;
+        margin: 12px 0 8px 1px;
+        text-align: left; }
 
 @-webkit-keyframes menu {
   from {

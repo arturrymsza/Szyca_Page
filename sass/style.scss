@@ -128,10 +128,16 @@ header {
 main {
 	.services {
 		width:100%;
-		height:400px;
-		overflow:hidden;
-		background: radial-gradient(ellipse at center, #fff 0%, #fff 25%, #fff 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f7e', endColorstr='#36', GradientType=1 );
+  height:100%;
+  overflow:hidden;
+  background: rgba(17,126,104,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(17,126,104,1) 0%, rgba(17,126,104,1) 25%, rgba(1,81,54,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(17,126,104,1)), color-stop(25%, rgba(17,126,104,1)), color-stop(100%, rgba(1,81,54,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(17,126,104,1) 0%, rgba(17,126,104,1) 25%, rgba(1,81,54,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(17,126,104,1) 0%, rgba(17,126,104,1) 25%, rgba(1,81,54,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(17,126,104,1) 0%, rgba(17,126,104,1) 25%, rgba(1,81,54,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(17,126,104,1) 0%, rgba(17,126,104,1) 25%, rgba(1,81,54,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#117e68', endColorstr='#015136', GradientType=1 );
 
 		.wrapper {
 			box-sizing:border-box;
@@ -143,7 +149,7 @@ main {
   			.left,
   			.middle,
   			.right {
-  				float:left;
+  				float: left;
 				position:relative;
 				height:100%;
 				background-color:#0ff0ff;
@@ -151,10 +157,10 @@ main {
   			}
 
   			.left {
-  				transform-origin:100% 50%;
+  				transform-origin: 100% 50%;
 				transform: rotateY(180deg);
-				transition:.7s ease-in-out;
-				z-index:20;
+				transition: .7s ease-in-out;
+				z-index: 20;
 
 				.open {
 					transform-origin:100% 50%;
@@ -171,9 +177,50 @@ main {
 				}
 
 				.front{
-					transform:rotateY(180deg);
-					background-color:#0ff0ff;
-					z-index:5;
+					transform: rotateY(180deg);
+					background-color: #0ff0ff;
+					z-index: 5;
+
+					.openB {
+						background-color:transparent;
+						border:2px solid rgba(0,0,0,0.5);
+						padding:5px;
+						position:absolute;
+						min-width:120px;
+						max-width:150px;
+						z-index:50;
+						bottom:30px;
+						font-weight:400;
+						font-size:1em;
+						opacity:.7;
+						transition:.2s ease-in-out;
+						cursor:pointer;
+
+						&:hover {
+							background-color:rgba(0,0,0,1);
+							color:white;
+							transition:.2s ease-in-out;
+						}
+					}
+
+					.preview {
+						max-height:100px;
+						overflow:hidden;
+						text-overflow: ellipsis;
+						content: "";
+						position:relative;
+						display:block;
+
+						&:before {
+							content:'';
+							width:100%;
+							height:100%;    
+							position:absolute;
+							left:0;
+							top:0;
+							background:linear-gradient(transparent, white);
+						}
+					}
 				}
 				
 				.back{
@@ -197,9 +244,56 @@ main {
 					transform:rotateY(0deg);
 					transition:.7s ease-in-out;
   				}
+
+  				.closeB {
+  					position:absolute;
+					border:none;
+					background-color:rgba(0,0,0,0.6);
+					color:white;
+					z-index:50;
+					width:50px;
+					font-size:1.5em;
+					cursor:pointer;
+					height:50px;
+					top:0;
+					right:0;
+					transition:.2s ease-in-out;
+
+					&:hover {
+						background-color:rgba(0,0,0,0.2);
+						transition:.2s ease-in-out;
+					}
+  				}
   			}
 
+			.sectionWrap {
+				height:100%;
+				width:100%;
+				padding:40px;
+				box-sizing:border-box;
+				overflow:hidden;
 
+				h1 {
+					font-family: 'Playfair Display', serif;
+					font-size:3em;
+					line-height:1;
+					color:#34495e;
+				}
+
+				p {
+					font-family: 'Josefin Sans', sans-serif;
+					font-size:1.2em;
+					max-height:100px;
+					text-overflow: clip;
+				}
+
+				hr {
+					border:3px solid #34495e;
+					width:30px;
+					margin:12px 0 8px 1px;
+					text-align:left;
+				}
+			}
 		}
 	}
 }
