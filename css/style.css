@@ -4,96 +4,308 @@
   max-width: 1140px;
   margin: 0 auto; }
 
-.top_menu {
-  height: 0;
-  visibility: hidden;
-  -webkit-animation-name: menu;
-          animation-name: menu;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 7s;
-          animation-delay: 7s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  font-family: "Josefin Sans", sans-serif; }
-  .top_menu .logo_menu {
-    opacity: 0;
-    -webkit-animation-name: logo_show;
-            animation-name: logo_show;
-    -webkit-animation-delay: 8.5s;
-            animation-delay: 8.5s;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+header {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0); }
+  header .top_menu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    -webkit-animation-name: menu;
+            animation-name: menu;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
     -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards; }
+            animation-fill-mode: forwards;
+    font-family: "Josefin Sans", sans-serif; }
+    header .top_menu .logo_menu {
+      opacity: 0;
+      -webkit-animation-name: logo_show;
+              animation-name: logo_show;
+      -webkit-animation-delay: 8.5s;
+              animation-delay: 8.5s;
+      -webkit-animation-duration: 1s;
+              animation-duration: 1s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      header .top_menu .logo_menu img {
+        height: 120px;
+        padding: 10px 0; }
+      header .top_menu .logo_menu ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+        header .top_menu .logo_menu ul li {
+          padding: 0 30px;
+          font-size: 15px;
+          cursor: pointer; }
+        header .top_menu .logo_menu ul a {
+          text-decoration: none;
+          color: black; }
+  header .jumbotron {
+    position: relative;
+    background-image: url("../img/szyca_szyld.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    -webkit-animation-name: jumbo;
+            animation-name: jumbo;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 80px;
+    font-weight: 700; }
+    header .jumbotron .tradition {
+      opacity: 0;
+      position: absolute;
+      top: 60%;
+      left: 70%;
+      color: white;
+      -webkit-animation-name: fadeRL;
+              animation-name: fadeRL;
+      -webkit-animation-duration: 6s;
+              animation-duration: 6s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards; }
+    header .jumbotron .quality {
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      color: white;
+      -webkit-animation-name: fadeLR;
+              animation-name: fadeLR;
+      -webkit-animation-duration: 6s;
+              animation-duration: 6s;
+      -webkit-animation-delay: 3s;
+              animation-delay: 3s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards; }
+    header .jumbotron .passion {
+      opacity: 0;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      color: white;
+      -webkit-animation-name: fadeRLL;
+              animation-name: fadeRLL;
+      -webkit-animation-duration: 5s;
+              animation-duration: 5s;
+      -webkit-animation-delay: 3s;
+              animation-delay: 3s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards; }
+    header .jumbotron img {
+      opacity: 0;
+      width: 200px;
+      -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
+          align-self: center;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear;
+      -webkit-animation-name: magnify;
+              animation-name: magnify;
+      -webkit-animation-duration: 10s;
+              animation-duration: 10s;
+      -webkit-animation-delay: 5.5s;
+              animation-delay: 5.5s; }
 
-.jumbotron {
-  position: relative;
-  background-image: url("../img/szyca_szyld.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  -webkit-animation-name: jumbo;
-          animation-name: jumbo;
-  -webkit-animation-delay: 7s;
-          animation-delay: 7s;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 80px;
-  font-weight: 700; }
-  .jumbotron .tradition {
-    opacity: 0;
-    position: absolute;
-    top: 60%;
-    left: 70%;
-    color: white;
-    -webkit-animation-name: fadeRL;
-            animation-name: fadeRL;
-    -webkit-animation-duration: 6s;
-            animation-duration: 6s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards; }
-  .jumbotron .quality {
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    color: white;
-    -webkit-animation-name: fadeLR;
-            animation-name: fadeLR;
-    -webkit-animation-duration: 6s;
-            animation-duration: 6s;
-    -webkit-animation-delay: 3s;
-            animation-delay: 3s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards; }
-  .jumbotron .passion {
-    opacity: 0;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    color: white;
-    -webkit-animation-name: fadeRLL;
-            animation-name: fadeRLL;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-    -webkit-animation-delay: 3s;
-            animation-delay: 3s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards; }
+main .services {
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  background: white; }
+  main .services .wrapper {
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    -webkit-perspective: 2000px;
+            perspective: 2000px; }
+    main .services .wrapper .left,
+    main .services .wrapper .middle,
+    main .services .wrapper .right {
+      float: left;
+      position: relative;
+      height: 100%;
+      color: #0f0f0f;
+      background-color: #fff345;
+      width: 33%; }
+    main .services .wrapper .left {
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+      transition: .7s ease-in-out;
+      z-index: 20; }
+      main .services .wrapper .left.open {
+        -webkit-transform-origin: 100% 50%;
+                transform-origin: 100% 50%;
+        -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+        transition: .7s ease-in-out; }
+      main .services .wrapper .left .front,
+      main .services .wrapper .left .back {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0; }
+      main .services .wrapper .left .front {
+        -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+        color: #0f0f0f;
+        background-color: white;
+        z-index: 5; }
+        main .services .wrapper .left .front .sectionWrap {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          padding: 5px 20px; }
+        main .services .wrapper .left .front .openB {
+          -webkit-transform: translateX(-60px);
+                  transform: translateX(-60px);
+          background-color: #fff345;
+          border: none;
+          padding: 5px;
+          min-width: 120px;
+          max-width: 150px;
+          z-index: 50;
+          bottom: 20px;
+          font-weight: 400;
+          font-size: 1em;
+          opacity: 1;
+          transition: .2s ease-in-out;
+          cursor: pointer;
+          color: #0f0f0f; }
+          main .services .wrapper .left .front .openB:hover {
+            background-color: black;
+            color: white;
+            transition: .2s ease-in-out; }
+        main .services .wrapper .left .front .preview {
+          max-height: 100px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          content: "";
+          position: relative;
+          display: block; }
+          main .services .wrapper .left .front .preview:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(transparent, white); }
+      main .services .wrapper .left img {
+        box-sizing: border-box;
+        height: 70%; }
+      main .services .wrapper .left .back {
+        color: #0f0f0f;
+        background-color: #fff345;
+        z-index: 4;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden; }
+        main .services .wrapper .left .back.open {
+          z-index: 10; }
+    main .services .wrapper .right {
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      -webkit-transform: rotateY(-180deg);
+              transform: rotateY(-180deg);
+      transition: .7s ease-in-out; }
+      main .services .wrapper .right.open {
+        -webkit-transform-origin: 0% 50%;
+                transform-origin: 0% 50%;
+        -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+        transition: .7s ease-in-out; }
+      main .services .wrapper .right .closeB {
+        position: absolute;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        z-index: 50;
+        width: 50px;
+        font-size: 1.5em;
+        cursor: pointer;
+        height: 50px;
+        top: 0;
+        right: 0;
+        transition: .2s ease-in-out; }
+        main .services .wrapper .right .closeB:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+          transition: .2s ease-in-out; }
+    main .services .wrapper .sectionWrap {
+      height: 100%;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow: hidden; }
+      main .services .wrapper .sectionWrap h1 {
+        font-size: 3em;
+        line-height: 1; }
+      main .services .wrapper .sectionWrap p {
+        font-size: 1.2em;
+        max-height: 100px;
+        text-overflow: clip; }
+      main .services .wrapper .sectionWrap hr {
+        border: 3px solid #34495e;
+        width: 30px;
+        margin: 12px 0 8px 1px;
+        text-align: left;
+        color: white; }
 
 @-webkit-keyframes menu {
   from {
@@ -101,7 +313,7 @@
     height: 0; }
   to {
     visibility: visible;
-    height: 10vh; } }
+    height: 15vh; } }
 
 @keyframes menu {
   from {
@@ -109,21 +321,21 @@
     height: 0; }
   to {
     visibility: visible;
-    height: 10vh; } }
+    height: 15vh; } }
 @-webkit-keyframes jumbo {
   from {
     background-image: url("../img/szyca_szyld.jpg");
     height: 100vh; }
   to {
     background-image: url("../img/szyca_torba.jpg");
-    height: 90vh; } }
+    height: 85vh; } }
 @keyframes jumbo {
   from {
     background-image: url("../img/szyca_szyld.jpg");
     height: 100vh; }
   to {
     background-image: url("../img/szyca_torba.jpg");
-    height: 90vh; } }
+    height: 85vh; } }
 @-webkit-keyframes logo_show {
   from {
     opacity: 0; }
@@ -188,3 +400,23 @@
   100% {
     left: 80%;
     opacity: 0; } }
+@-webkit-keyframes magnify {
+  0% {
+    opacity: 0;
+    width: 200px; }
+  80% {
+    opacity: 1;
+    width: 400px; }
+  100% {
+    opacity: 0;
+    width: 500px; } }
+@keyframes magnify {
+  0% {
+    opacity: 0;
+    width: 200px; }
+  80% {
+    opacity: 1;
+    width: 400px; }
+  100% {
+    opacity: 0;
+    width: 500px; } }
