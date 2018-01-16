@@ -4,6 +4,7 @@ $(function() {
 	var $left = $('.left');
 	var $right = $('.right');
 	var $back = $('.back');
+	var $tailor = $('#tailor');
 
 	$open.on('click', function(){
 		$left.addClass('open');
@@ -24,4 +25,14 @@ $(function() {
 			$back.removeClass('open');
 		}, 600);
 	});
+
+	$tailor.hide();
+
+	window.onscroll = function() {show()};
+
+	function show() {
+    	if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+        	$tailor.show( "fold", {horizFirst: true}, 1000 );
+        }
+    }
 });

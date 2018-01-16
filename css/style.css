@@ -152,7 +152,7 @@ header {
               animation-delay: 5.5s; }
 
 main .services {
-  position: absolute;
+  position: static;
   width: 100%;
   height: 40vh;
   overflow: hidden;
@@ -294,7 +294,7 @@ main .services {
       box-sizing: border-box;
       overflow: hidden; }
       main .services .wrapper .sectionWrap h1 {
-        font-size: 3em;
+        font-size: 24px;
         line-height: 1; }
       main .services .wrapper .sectionWrap p {
         font-size: 1.2em;
@@ -306,6 +306,16 @@ main .services {
         margin: 12px 0 8px 1px;
         text-align: left;
         color: white; }
+main .about {
+  height: 60vh; }
+  main .about h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #0f0f0f; }
+  main .about img {
+    margin: 50px 0;
+    width: 500px; }
 
 @-webkit-keyframes menu {
   from {
