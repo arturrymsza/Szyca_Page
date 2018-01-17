@@ -5,6 +5,7 @@ $(function() {
 	var $right = $('.right');
 	var $back = $('.back');
 	var $tailor = $('#tailor');
+	var $aboutUs = $('#about-us');
 
 	$open.on('click', function(){
 		$left.addClass('open');
@@ -27,12 +28,14 @@ $(function() {
 	});
 
 	$tailor.hide();
+	$aboutUs.hide();
 
 	window.onscroll = function() {show()};
 
 	function show() {
     	if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
         	$tailor.show( "fold", {horizFirst: true}, 1000 );
+        	$aboutUs.delay(1000).show("drop", {direction: "right"}, 1000);
         }
     }
 });

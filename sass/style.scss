@@ -310,6 +310,7 @@ main {
 
 	.about {
 		height: 60vh;
+		position: static;
 
 		h1 {
 			font-family: $font;
@@ -318,9 +319,32 @@ main {
 			color: $foldColor;
 		}
 
-		img {
-			margin: 50px 0;
-			width: 500px;
+		.about-content {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			.about-image {
+				position: relative;
+				height: 400px;
+				width: 500px;
+
+				img {
+					margin: 50px 0;
+					width: 500px;
+				}
+			}
+
+			p {
+				position: relative;
+				margin: 50px 0;
+				width: 500px;
+				font-family: $font;
+				font-size: 20px;
+				font-weight: 300;
+				text-align: justify;
+			}
 		}
 	}
 }
