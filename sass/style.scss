@@ -308,7 +308,7 @@ main {
 	}
 
 	.about {
-		height: 60vh;
+		height: 100vh;
 		position: static;
 
 		h1 {
@@ -334,7 +334,7 @@ main {
 				img {
 					height: 333px;
 					width: 500px;
-					transition: transform 8s;
+					transition: transform 6s;
 					&:hover {
 						transform: scale(1.1)
 					};
@@ -349,6 +349,50 @@ main {
 				font-size: 20px;
 				font-weight: 300;
 				text-align: justify;
+			}
+		}
+	}
+
+	.products {
+		height: 100vh;
+		position: static;
+
+		h1 {
+			font-family: $font;
+			font-size: 30px;
+			font-weight: 700;
+			color: $foldColor;
+		}
+
+		.svg-wrapper {
+			height: 60px;
+			width: 474px;
+			position: relative;
+			width: 320px;
+
+			.shape {
+				fill: transparent;
+				stroke-dasharray: 140 540;
+				stroke-dashoffset: -474;
+				stroke-width: 8px;
+				stroke: $yellow;
+			}
+
+			.text {
+				font-family: $font;
+				font-size: 20px;
+				font-weight: 400;
+				color: $foldColor;
+				line-height: 32px;
+				position: relative;
+				text-align: center;
+				top: -48px;
+			};
+
+			&:hover {
+				.shape {
+					animation: 0.5s draw linear forwards;
+				}
 			}
 		}
 	}
@@ -430,5 +474,18 @@ main {
 	100% {
 		opacity: 0;
 		transform: scale(2,2);
+	}
+}
+
+@keyframes draw {
+	0% {
+		stroke-dasharray: 140 540;
+		stroke-dashoffset: -474;
+		stroke-width: 8px;
+	}
+	100% {
+		stroke-dasharray: 760;
+		stroke-dashoffset: 0;
+		stroke-width: 2px;
 	}
 }
