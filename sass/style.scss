@@ -15,7 +15,6 @@ header {
 	transform: translateZ(0);
 
 	.top_menu {
-		position: sticky;
 		top: 0;
 		height: 0;
 		visibility: hidden;
@@ -87,7 +86,7 @@ header {
 			left: 70%;
 			color: white;
 			animation-name: fadeRL;
-			animation-duration: 6s;
+			animation-duration: 4s;
 			animation-fill-mode: forwards;
 		}
 
@@ -98,8 +97,8 @@ header {
 			left: 20%;
 			color: white;
 			animation-name: fadeLR;
-			animation-duration: 6s;
-			animation-delay: 3s;
+			animation-duration: 4s;
+			animation-delay: 2s;
 			animation-fill-mode: forwards;
 		}
 
@@ -110,8 +109,8 @@ header {
 			left: 50%;
 			color: white;
 			animation-name: fadeRLL;
-			animation-duration: 5s;
-			animation-delay: 3s;
+			animation-duration: 4s;
+			animation-delay: 2s;
 			animation-fill-mode: forwards;
 		}
 
@@ -121,8 +120,8 @@ header {
 			align-self: center;
 			animation-timing-function: linear;
 			animation-name: magnify;
-			animation-duration: 10s;
-			animation-delay: 5.5s;
+			animation-duration: 5s;
+			animation-delay: 4s;
 		}
 	}
 }
@@ -327,12 +326,18 @@ main {
 
 			.about-image {
 				position: relative;
-				height: 400px;
+				margin: 50px 0;
+				height: 333px;
 				width: 500px;
+				overflow: hidden;
 
 				img {
-					margin: 50px 0;
+					height: 333px;
 					width: 500px;
+					transition: transform 8s;
+					&:hover {
+						transform: scale(1.1)
+					};
 				}
 			}
 
@@ -416,14 +421,14 @@ main {
 @keyframes magnify {
 	0% {
 		opacity: 0;
-		width: 200px;
+		transform: scale(1,1);
 	}
 	80% {
 		opacity: 1;
-		width: 400px;
+		transform: scale(1.8, 1.8);
 	}
 	100% {
 		opacity: 0;
-		width: 500px;
+		transform: scale(2,2);
 	}
 }
