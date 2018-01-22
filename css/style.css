@@ -349,36 +349,55 @@ main .about {
       font-weight: 300;
       text-align: justify; }
 main .products {
-  height: 100vh;
-  position: static; }
+  height: 70vh;
+  position: static;
+  background-image: url("../../img/products_background.jpg");
+  background-size: cover;
+  background-position: center; }
   main .products h1 {
+    padding: 30px 0 15px;
     font-family: "Josefin Sans", sans-serif;
     font-size: 30px;
     font-weight: 700;
-    color: #0f0f0f; }
-  main .products .svg-wrapper {
-    height: 60px;
-    width: 474px;
-    position: relative;
-    width: 320px; }
-    main .products .svg-wrapper .shape {
-      fill: transparent;
-      stroke-dasharray: 140 540;
-      stroke-dashoffset: -474;
-      stroke-width: 8px;
-      stroke: #fff345; }
-    main .products .svg-wrapper .text {
-      font-family: "Josefin Sans", sans-serif;
-      font-size: 20px;
-      font-weight: 400;
-      color: #0f0f0f;
-      line-height: 32px;
+    color: white; }
+  main .products .products-wrapper {
+    height: 60vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    main .products .products-wrapper .svg-wrapper {
+      height: 300px;
       position: relative;
-      text-align: center;
-      top: -48px; }
-    main .products .svg-wrapper:hover .shape {
-      -webkit-animation: 0.5s draw linear forwards;
-              animation: 0.5s draw linear forwards; }
+      width: 300px; }
+      main .products .products-wrapper .svg-wrapper .shape {
+        fill: transparent;
+        stroke-dasharray: 140 1040;
+        stroke-dashoffset: -674;
+        stroke-width: 10px;
+        stroke: #fff345; }
+      main .products .products-wrapper .svg-wrapper .text {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        color: white;
+        line-height: 32px;
+        position: relative;
+        text-align: center;
+        top: -48px; }
+      main .products .products-wrapper .svg-wrapper:hover .shape {
+        -webkit-animation: 0.5s draw linear forwards;
+                animation: 0.5s draw linear forwards; }
 
 @-webkit-keyframes menu {
   from {
@@ -501,19 +520,19 @@ main .products {
             transform: scale(2, 2); } }
 @-webkit-keyframes draw {
   0% {
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474;
-    stroke-width: 8px; }
+    stroke-dasharray: 140 1040;
+    stroke-dashoffset: -674;
+    stroke-width: 10px; }
   100% {
-    stroke-dasharray: 760;
+    stroke-dasharray: 1260;
     stroke-dashoffset: 0;
-    stroke-width: 2px; } }
+    stroke-width: 3px; } }
 @keyframes draw {
   0% {
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474;
-    stroke-width: 8px; }
+    stroke-dasharray: 140 1040;
+    stroke-dashoffset: -674;
+    stroke-width: 10px; }
   100% {
-    stroke-dasharray: 760;
+    stroke-dasharray: 1260;
     stroke-dashoffset: 0;
-    stroke-width: 2px; } }
+    stroke-width: 3px; } }
