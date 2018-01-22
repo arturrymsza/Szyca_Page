@@ -354,44 +354,56 @@ main {
 	}
 
 	.products {
-		height: 100vh;
+		height: 70vh;
 		position: static;
+		background-image: url('../../img/products_background.jpg');
+		background-size: cover;
+		background-position: center;
 
 		h1 {
+			padding: 30px 0 15px;
 			font-family: $font;
 			font-size: 30px;
 			font-weight: 700;
-			color: $foldColor;
+			color: white;
 		}
 
-		.svg-wrapper {
-			height: 60px;
-			width: 474px;
-			position: relative;
-			width: 320px;
+		.products-wrapper {
+			height: 60vh;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
 
-			.shape {
-				fill: transparent;
-				stroke-dasharray: 140 540;
-				stroke-dashoffset: -474;
-				stroke-width: 8px;
-				stroke: $yellow;
-			}
-
-			.text {
-				font-family: $font;
-				font-size: 20px;
-				font-weight: 400;
-				color: $foldColor;
-				line-height: 32px;
+			.svg-wrapper {
+				height: 300px;
 				position: relative;
-				text-align: center;
-				top: -48px;
-			};
+				width: 300px;
 
-			&:hover {
 				.shape {
-					animation: 0.5s draw linear forwards;
+					fill: transparent;
+					stroke-dasharray: 140 1040;
+					stroke-dashoffset: -674;
+					stroke-width: 10px;
+					stroke: $yellow;
+				}
+
+				.text {
+					font-family: $font;
+					font-size: 20px;
+					font-weight: 400;
+					color: white;
+					line-height: 32px;
+					position: relative;
+					text-align: center;
+					top: -48px;
+				};
+
+				&:hover {
+					.shape {
+						animation: 0.5s draw linear forwards;
+					}
 				}
 			}
 		}
@@ -479,13 +491,13 @@ main {
 
 @keyframes draw {
 	0% {
-		stroke-dasharray: 140 540;
-		stroke-dashoffset: -474;
-		stroke-width: 8px;
+		stroke-dasharray: 140 1040;
+		stroke-dashoffset: -674;
+		stroke-width: 10px;
 	}
 	100% {
-		stroke-dasharray: 760;
+		stroke-dasharray: 1260;
 		stroke-dashoffset: 0;
-		stroke-width: 2px;
+		stroke-width: 3px;
 	}
 }
