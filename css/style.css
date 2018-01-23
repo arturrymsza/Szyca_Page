@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Petit+Formal+Script&subset=latin-ext");
 .container {
   width: 100%;
   max-width: 1140px;
@@ -155,6 +156,12 @@ main .services {
   height: 40vh;
   overflow: hidden;
   background: white; }
+  main .services h2 {
+    padding: 30px 0 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #0f0f0f; }
   main .services .wrapper {
     font-family: "Josefin Sans", sans-serif;
     box-sizing: border-box;
@@ -275,10 +282,10 @@ main .services {
         background-color: rgba(0, 0, 0, 0.6);
         color: white;
         z-index: 50;
-        width: 50px;
-        font-size: 1.5em;
+        width: 20px;
+        font-size: 10px;
         cursor: pointer;
-        height: 50px;
+        height: 20px;
         top: 0;
         right: 0;
         transition: .2s ease-in-out; }
@@ -308,6 +315,7 @@ main .about {
   height: 100vh;
   position: static; }
   main .about h1 {
+    padding: 30px 0 15px;
     font-family: "Josefin Sans", sans-serif;
     font-size: 30px;
     font-weight: 700;
@@ -398,6 +406,29 @@ main .products {
       main .products .products-wrapper .svg-wrapper:hover .shape {
         -webkit-animation: 0.5s draw linear forwards;
                 animation: 0.5s draw linear forwards; }
+main .sentence {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 30vh;
+  padding: 20px 0; }
+  main .sentence .sentence-text h2 {
+    font-family: "Petit Formal Script", cursive;
+    font-size: 22px;
+    text-align: center;
+    padding: 60px 0 20px;
+    line-height: 35px; }
+  main .sentence .sentence-text h3 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    text-align: right;
+    font-weight: 300; }
+  main .sentence .sentence-scale {
+    transition: -webkit-transform 12s;
+    transition: transform 12s;
+    transition: transform 12s, -webkit-transform 12s;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); }
 
 @-webkit-keyframes menu {
   from {

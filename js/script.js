@@ -8,16 +8,8 @@ $(function() {
 	var $aboutUs = $('#about-us');
 	var $otherImage = $('#other-image');
 	var $aboutUsBottom = $('#about-us-bottom');
+	var $sentenceText = $('.sentence-text')
 
-	$open.on('click', function(){
-		$left.addClass('open');
-		setTimeout(function(){
-			$right.addClass('open');
-		}, 250);
-		setTimeout(function(){
-			$back.addClass('open');
-		}, 350);
-	});
 
 	$close.on('click', function(){
 		setTimeout(function(){
@@ -37,6 +29,15 @@ $(function() {
 	window.onscroll = function() {show()};
 
 	function show() {
+		if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+			$left.addClass('open');
+			setTimeout(function(){
+				$right.addClass('open');
+			}, 250);
+			setTimeout(function(){
+				$back.addClass('open');
+			}, 350);	
+		}
     	if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
         	$tailor.show( "fold", {horizFirst: true}, 1000 );
         	$aboutUs.delay(1000).show("drop", {direction: "right"}, 1000);
@@ -44,6 +45,9 @@ $(function() {
         if (document.body.scrollTop > 1100 || document.documentElement.scrollTop > 1100) {
         	$otherImage.delay(1000).show("fold", {direction: "right"}, 1000);
         	$aboutUsBottom.show("drop", {direction: "left"}, 1000);
+        }
+        if (document.body.scrollTop > 1800 || document.documentElement.scrollTop > 1800) {
+        	$sentenceText.addClass('sentence-scale');
         }
     }
 });
