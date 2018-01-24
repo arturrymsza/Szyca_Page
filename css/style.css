@@ -424,11 +424,18 @@ main .sentence {
     text-align: right;
     font-weight: 300; }
   main .sentence .sentence-scale {
-    transition: -webkit-transform 12s;
-    transition: transform 12s;
-    transition: transform 12s, -webkit-transform 12s;
-    -webkit-transform: scale(1.15);
-            transform: scale(1.15); }
+    transition: -webkit-transform 15s;
+    transition: transform 15s;
+    transition: transform 15s, -webkit-transform 15s;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+  main .sentence .sentence-shape {
+    position: relative;
+    width: 0;
+    fill: #fff345;
+    z-index: -1;
+    -webkit-transform: translate(60px, -50px);
+            transform: translate(60px, -50px); }
 
 @-webkit-keyframes menu {
   from {

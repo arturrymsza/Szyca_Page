@@ -445,8 +445,16 @@ main {
 		}
 
 		.sentence-scale {
-			transition: transform 12s;
-			transform: scale(1.15);
+			transition: transform 15s;
+			transform: scale(1.2);
+		}
+
+		.sentence-shape {
+			position: relative;
+			width: 0;
+			fill: $yellow;
+			z-index: -1;
+			transform: translate(60px, -50px);
 		}
 	}
 }

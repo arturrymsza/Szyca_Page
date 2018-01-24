@@ -8,7 +8,8 @@ $(function() {
 	var $aboutUs = $('#about-us');
 	var $otherImage = $('#other-image');
 	var $aboutUsBottom = $('#about-us-bottom');
-	var $sentenceText = $('.sentence-text')
+	var $sentenceText = $('.sentence-text');
+	var $sentenceShape = $('.sentence-shape');
 
 
 	$close.on('click', function(){
@@ -25,6 +26,7 @@ $(function() {
 	$aboutUs.hide();
 	$otherImage.hide();
 	$aboutUsBottom.hide();
+	/*$sentenceShape.hide();*/
 
 	window.onscroll = function() {show()};
 
@@ -46,8 +48,9 @@ $(function() {
         	$otherImage.delay(1000).show("fold", {direction: "right"}, 1000);
         	$aboutUsBottom.show("drop", {direction: "left"}, 1000);
         }
-        if (document.body.scrollTop > 1800 || document.documentElement.scrollTop > 1800) {
+        if (document.body.scrollTop > 2300 || document.documentElement.scrollTop > 2300) {
         	$sentenceText.addClass('sentence-scale');
+        	$sentenceShape.delay(2000).animate({width: "300px"}, 2000, "swing");
         }
     }
 });
