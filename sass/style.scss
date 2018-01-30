@@ -364,6 +364,86 @@ main {
 		}
 	}
 
+	.horizontal-timeline {
+		opacity: 0;
+		margin: 2em auto;
+
+		&::before {
+			content: 'mobile';
+			display: none;
+		}
+
+		&.loaded {
+			opacity: 1;
+		}
+
+		.timeline {
+			position: relative;
+			height: 100%;
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		.events-wrapper {
+			position: relative;
+			height: 100%;
+			margin: 0 40px;
+			overflow: hidden;
+
+			&::after,
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				height: 100%;
+				width: 20px;
+			}
+
+			&::before {
+				left: 0;
+			}
+		}
+
+		.events-content {
+			position: relative;
+
+			li {
+				position: absolute;
+				z-index: 1;
+				width: 100%;
+				left: 0;
+				top: 0;
+				transform: translateX(-100%);
+				opacity: 0;
+				animation-duration: 0.4s;
+				animation-timing-function: ease-in-out;
+
+				.selected {
+					position: relative;
+					z-index: 2;
+					opacity: 1;
+					transfor: translateX(0);
+				}
+
+				.enter-right,
+				.leave-right {
+					animation-name: enter-right;
+				}
+
+				.enter-left,
+				.leave-left {
+					animation-name: enter-left;
+				}
+
+				.leave-right,
+				.leave-left {
+					animation-direction: reverse;
+				}
+			}
+		}
+	}
+
 	.products {
 		height: 70vh;
 		position: static;

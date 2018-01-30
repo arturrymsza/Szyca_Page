@@ -356,6 +356,65 @@ main .about {
       font-size: 20px;
       font-weight: 300;
       text-align: justify; }
+main .horizontal-timeline {
+  opacity: 0;
+  margin: 2em auto; }
+  main .horizontal-timeline::before {
+    content: 'mobile';
+    display: none; }
+  main .horizontal-timeline.loaded {
+    opacity: 1; }
+  main .horizontal-timeline .timeline {
+    position: relative;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto; }
+  main .horizontal-timeline .events-wrapper {
+    position: relative;
+    height: 100%;
+    margin: 0 40px;
+    overflow: hidden; }
+    main .horizontal-timeline .events-wrapper::after, main .horizontal-timeline .events-wrapper::before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      height: 100%;
+      width: 20px; }
+    main .horizontal-timeline .events-wrapper::before {
+      left: 0; }
+  main .horizontal-timeline .events-content {
+    position: relative; }
+    main .horizontal-timeline .events-content li {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      left: 0;
+      top: 0;
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+      opacity: 0;
+      -webkit-animation-duration: 0.4s;
+              animation-duration: 0.4s;
+      -webkit-animation-timing-function: ease-in-out;
+              animation-timing-function: ease-in-out; }
+      main .horizontal-timeline .events-content li .selected {
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        transfor: translateX(0); }
+      main .horizontal-timeline .events-content li .enter-right,
+      main .horizontal-timeline .events-content li .leave-right {
+        -webkit-animation-name: enter-right;
+                animation-name: enter-right; }
+      main .horizontal-timeline .events-content li .enter-left,
+      main .horizontal-timeline .events-content li .leave-left {
+        -webkit-animation-name: enter-left;
+                animation-name: enter-left; }
+      main .horizontal-timeline .events-content li .leave-right,
+      main .horizontal-timeline .events-content li .leave-left {
+        -webkit-animation-direction: reverse;
+                animation-direction: reverse; }
 main .products {
   height: 70vh;
   position: static;
