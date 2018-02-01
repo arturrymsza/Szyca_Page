@@ -381,8 +381,6 @@ main .horizontal-timeline {
       top: 0;
       height: 100%;
       width: 20px; }
-    main .horizontal-timeline .events-wrapper::before {
-      left: 0; }
   main .horizontal-timeline .events-content {
     position: relative; }
     main .horizontal-timeline .events-content li {
