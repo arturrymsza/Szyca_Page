@@ -408,26 +408,29 @@ main {
 		opacity: 0;
 		margin: 2em auto;
 		transition: opacity .2s;
+		position: relative;
 
 		&::before {
 			content: 'mobile';
 			display: none;
 		}
 
-		.loaded {
+		&.loaded {
 			opacity: 1;
 		}
 
 		.timeline {
 			position: relative;
 			height: 100%;
-			width: 90%;
+			width: 100%;
+			max-width: 1000px;
 			margin: 0 auto;
 		}
 
 		.events-wrapper {
 			position: relative;
 			height: 100%;
+			width: 90%;
 			margin: 0 40px;
 			overflow: hidden;
 
@@ -453,7 +456,7 @@ main {
 		}
 
 		.events {
-			position: absolute;
+			position: static;
 			z-index: 1;
 			left: 0;
 			top: 49px;
@@ -503,7 +506,7 @@ main {
 				border-color: $color-2;
 			}
 
-			.selected {
+			&.selected {
 				pointer-events: none;
 
 				&::after {
@@ -549,12 +552,12 @@ main {
 				background: url(../img/cd-arrow.svg) no-repeat 0 0;
 			}
 
-			.prev {
+			&.prev {
 				left: 0;
 				transform: translateY(-50%) rotate(180deg);
 			}
 
-			.next {
+			&.next {
 				right: 0;
 			}
 
@@ -562,7 +565,7 @@ main {
 				border-color: $color-2;
 			}
 
-			.inactive {
+			&.inactive {
 				cursor: not-allowed;
 
 				&::after {
@@ -594,25 +597,25 @@ main {
 				animation-duration: 0.4s;
 				animation-timing-function: ease-in-out;
 
-				.selected {
+				&.selected {
 					position: relative;
 					z-index: 2;
 					opacity: 1;
 					transfor: translateX(0);
 				}
 
-				.enter-right,
-				.leave-right {
+				&.enter-right,
+				&.leave-right {
 					animation-name: enter-right;
 				}
 
-				.enter-left,
-				.leave-left {
+				&.enter-left,
+				&.leave-left {
 					animation-name: enter-left;
 				}
 
-				.leave-right,
-				.leave-left {
+				&.leave-right,
+				&.leave-left {
 					animation-direction: reverse;
 				}
 			}
