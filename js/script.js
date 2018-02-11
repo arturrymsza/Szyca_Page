@@ -11,7 +11,7 @@ $(function() {
 	var $sentenceText = $('.sentence-text');
 	var $sentenceShape = $('.sentence-shape');
 	var timelines = $('.horizontal-timeline'),
-		eventsMinDistance = 60;
+		eventsMinDistance = 45;
 
 	$close.on('click', function(){
 		setTimeout(function(){
@@ -48,7 +48,7 @@ $(function() {
         	$otherImage.delay(1000).show("fold", {direction: "right"}, 1000);
         	$aboutUsBottom.show("drop", {direction: "left"}, 1000);
         }
-        if (document.body.scrollTop > 2300 || document.documentElement.scrollTop > 2300) {
+        if (document.body.scrollTop > 2700 || document.documentElement.scrollTop > 2700) {
         	$sentenceText.addClass('sentence-scale');
         	$sentenceShape.delay(2000).animate({width: "300px"}, 2000, "swing");
         }

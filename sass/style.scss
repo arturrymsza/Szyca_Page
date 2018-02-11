@@ -42,7 +42,7 @@ $font-writing: 'Petit Formal Script', cursive;
 $foldColor: #0f0f0f;
 $yellow: #fff345;
 $color-1: #383838;
-$color-2: #7b9d6f;
+$color-2: #fff345;
 $color-3: #ffffff;
 $color-4: #f8f8f8;
 
@@ -405,6 +405,8 @@ main {
 	}
 
 	.horizontal-timeline {
+		height: 430px;
+		padding: 20px 0;
 		opacity: 0;
 		margin: 2em auto;
 		transition: opacity .2s;
@@ -421,16 +423,14 @@ main {
 
 		.timeline {
 			position: relative;
-			height: 100%;
-			width: 100%;
-			max-width: 1000px;
+			height: 100px;
+			width: 90%;
 			margin: 0 auto;
 		}
 
 		.events-wrapper {
 			position: relative;
 			height: 100%;
-			width: 90%;
 			margin: 0 40px;
 			overflow: hidden;
 
@@ -446,17 +446,21 @@ main {
 
 			&::before {
 				left: 0;
+				top: 49px;
+				height: 2px;
 	    		background-image: linear-gradient(to right,$color-4, rgba($color-4, 0));
 			}
 
 			&::after {
 				right: 0;
+				top: 49px;
+				height: 2px;
 				background-image: linear-gradient(to left,$color-4, rgba($color-4, 0));
 			}
 		}
 
 		.events {
-			position: static;
+			position: absolute; 
 			z-index: 1;
 			left: 0;
 			top: 49px;
@@ -479,14 +483,17 @@ main {
 		}
 
 		.events a {
+			font-family: $font;
+			font-weight: 300;
+			font-size: 1.3rem;
 			position: absolute;
 			bottom: 0;
 			z-index: 2;
 			text-align: center;
-			font-size: 1.3rem;
 			padding-bottom: 15px;
-			color: $color-1;
+			color: $foldColor;
 			transform: translateZ(0);
+			text-decoration: none;
 
 			&::after {
 				content: '';
@@ -521,10 +528,9 @@ main {
 		}
 
 		@include MQ(L) {
-			margin: 6em auto;
+			margin: 10px auto;
 			
 			&::before {
-				/* never visible - this is used in jQuery to check the current MQ */
 				content: 'desktop';
 			}
 		}
@@ -549,7 +555,7 @@ main {
 				height: 16px;
 				width: 16px;
 				@include center;
-				background: url(../img/cd-arrow.svg) no-repeat 0 0;
+				background: url(../img/arrow.svg) no-repeat 0 0;
 			}
 
 			&.prev {
@@ -601,7 +607,7 @@ main {
 					position: relative;
 					z-index: 2;
 					opacity: 1;
-					transfor: translateX(0);
+					transform: translateX(0);
 				}
 
 				&.enter-right,
@@ -623,12 +629,12 @@ main {
 			li > * {
 				max-width: 800px;
 				margin: 0 auto;
+				font-family: $font;
 			}
 
 			h2 {
 				font-weight: bold;
-				font-size: 2.6rem;
-				font-family: $font;
+				font-size: 1.7rem;
 				font-weight: 700;
 				line-height: 1.2;
 			}
@@ -637,6 +643,7 @@ main {
 				display: block;
 				font-style: italic;
 				margin: 10px auto;
+				font-size: 1.4;
 
 				&::before {
 					content: '- ';
@@ -644,7 +651,7 @@ main {
 			}
 
 			p {
-				font-size: 1.4rem;
+				font-size: 1rem;
 				color: shade($color-4, 40%);
 			}
 
@@ -655,7 +662,7 @@ main {
 			@include MQ(M) {
 
 				h2 {
-					font-size: 7rem;
+					font-size: 4rem;
 				}
 
 				em {
@@ -663,7 +670,7 @@ main {
 				}
 
 				p {
-					font-size: 1.8rem;
+					font-size: 1.4rem;
 				}
 			}
 		}
