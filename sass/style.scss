@@ -104,7 +104,7 @@ header {
 
 	.jumbotron {
 		position: relative;
-		background-image: url('../img/szyca_szyld.jpg');
+		background-image: url('../img/rynek_PRL.jpg');
 		background-position: center;
 		background-size: cover;
 		height: 100vh;
@@ -375,7 +375,7 @@ main {
 			flex-direction: row;
 			flex-wrap: wrap;
 
-			.about-image {
+			.about-image-tailor {
 				position: relative;
 				margin: 50px 0;
 				height: 333px;
@@ -400,6 +400,24 @@ main {
 				font-size: 20px;
 				font-weight: 300;
 				text-align: justify;
+			}
+
+			.about-image-street {
+				position: relative;
+				margin: 50px 0;
+				height: 663px;
+				width: 500px;
+				overflow: hidden;
+				transform: translateY(-250px);
+
+				img {
+					height: 663px;
+					width: 500px;
+					transition: transform 6s;
+					&:hover {
+						transform: scale(1.1)
+					};
+				}
 			}
 		}
 	}
@@ -679,7 +697,7 @@ main {
 	.products {
 		height: 70vh;
 		position: static;
-		background-image: url('../../img/products_background.jpg');
+		background-image: url('../img/products_background.jpg');
 		background-size: cover;
 		background-position: center;
 
@@ -780,7 +798,7 @@ main {
 
 @keyframes jumbo {
 	from {
-		background-image: url('../img/szyca_szyld.jpg');
+		background-image: url('../img/rynek_PRL.jpg');
 		height: 100vh;}
 	to {
 		background-image: url('../img/szyca_torba.jpg');

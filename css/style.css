@@ -70,7 +70,7 @@ header {
           color: black; }
   header .jumbotron {
     position: relative;
-    background-image: url("../img/szyca_szyld.jpg");
+    background-image: url("../img/rynek_PRL.jpg");
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -333,19 +333,19 @@ main .about {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-    main .about .about-content .about-image {
+    main .about .about-content .about-image-tailor {
       position: relative;
       margin: 50px 0;
       height: 333px;
       width: 500px;
       overflow: hidden; }
-      main .about .about-content .about-image img {
+      main .about .about-content .about-image-tailor img {
         height: 333px;
         width: 500px;
         transition: -webkit-transform 6s;
         transition: transform 6s;
         transition: transform 6s, -webkit-transform 6s; }
-        main .about .about-content .about-image img:hover {
+        main .about .about-content .about-image-tailor img:hover {
           -webkit-transform: scale(1.1);
                   transform: scale(1.1); }
     main .about .about-content p {
@@ -356,6 +356,23 @@ main .about {
       font-size: 20px;
       font-weight: 300;
       text-align: justify; }
+    main .about .about-content .about-image-street {
+      position: relative;
+      margin: 50px 0;
+      height: 663px;
+      width: 500px;
+      overflow: hidden;
+      -webkit-transform: translateY(-250px);
+              transform: translateY(-250px); }
+      main .about .about-content .about-image-street img {
+        height: 663px;
+        width: 500px;
+        transition: -webkit-transform 6s;
+        transition: transform 6s;
+        transition: transform 6s, -webkit-transform 6s; }
+        main .about .about-content .about-image-street img:hover {
+          -webkit-transform: scale(1.1);
+                  transform: scale(1.1); }
 main .horizontal-timeline {
   height: 430px;
   padding: 20px 0;
@@ -572,7 +589,7 @@ main .horizontal-timeline {
 main .products {
   height: 70vh;
   position: static;
-  background-image: url("../../img/products_background.jpg");
+  background-image: url("../img/products_background.jpg");
   background-size: cover;
   background-position: center; }
   main .products h1 {
@@ -667,14 +684,14 @@ main .sentence {
     height: 15vh; } }
 @-webkit-keyframes jumbo {
   from {
-    background-image: url("../img/szyca_szyld.jpg");
+    background-image: url("../img/rynek_PRL.jpg");
     height: 100vh; }
   to {
     background-image: url("../img/szyca_torba.jpg");
     height: 85vh; } }
 @keyframes jumbo {
   from {
-    background-image: url("../img/szyca_szyld.jpg");
+    background-image: url("../img/rynek_PRL.jpg");
     height: 100vh; }
   to {
     background-image: url("../img/szyca_torba.jpg");
