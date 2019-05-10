@@ -1,1 +1,1 @@
-# Szyca_Page
+https://arturrymsza.github.io/Szyca_Page/
